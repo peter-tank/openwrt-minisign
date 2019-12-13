@@ -74,7 +74,7 @@ define Package/minisign/description
 Minisign is a dead simple tool to sign files and verify signatures.
 endef
 
-CMAKE_OPTIONS += -DCMAKE_STRIP=$(TOOLCHAIN_DIR)/bin/$(TARGEY_CROSS)strip
+CMAKE_OPTIONS += -DCMAKE_STRIP=$(TOOLCHAIN_DIR)/bin/$(TARGET_CROSS)strip
 
 ifeq ($(CONFIG_$(PKG_NAME)_STATIC_LINK),y)
 	ifeq ($(CONFIG_$(PKG_NAME)_WITH_SODIUM),y)
