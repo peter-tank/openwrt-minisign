@@ -51,7 +51,7 @@ define Package/minisign
 	TITLE:=A dead simple tool to sign files and verify signatures.
 	URL:=https://github.com/jedisct1/minisign
 	DEPENDS:=+libpthread \
-		+!CONFIG_$(PKG_NAME)_WITH_SODIUM:libsodium
+		+!$(PKG_NAME)_WITH_SODIUM:libsodium
 endef
 
 define Package/minisign/config
