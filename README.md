@@ -35,7 +35,7 @@ minisign for OpenWrt
    # 添加 feeds/libsodium
    git clone https://github.com/shadowsocks/openwrt-feeds.git package/libs
    # 获取 minisign Makefile
-   git clone https://github.com/shadowsocks/openwrt-minisign.git package/minisign
+   git clone https://github.com/peter-tank/openwrt-minisign.git package/minisign
    # 删除 libsodium/Makefile 中所有`CONFIGURE_ARGS`相关的行 [`--disable ssp` 及`CONFIG_LIBSODIUM_MINIMAL`](https://github.com/shadowsocks/openwrt-feeds/blob/master/packages/libsodium/Makefile#L54)
    # 其中包括： Libraries -> libsodium 非最小安装(.config/CONFIG_LIBSODIUM_MINIMAL=n)
    # 默认静态链接 `libsodium`，最终的二进制并不依賴： Utilities -> minisign(.config/CONFIG_minisign_STATIC_LINK=y; CONFIG_minisign_WITH_SODIUM=y)
@@ -53,3 +53,4 @@ minisign for OpenWrt
   [2]: https://github.com/peter-tank/openwrt-minisign/releases/latest
   [B]: https://img.shields.io/github/release/peter-tank/openwrt-minisign.svg
   [3]: https://github.com/peter-tank/luci-app-dnscrypt-proxy
+  [S]: https://wiki.openwrt.org/doc/howto/obtain.firmware.sdk
